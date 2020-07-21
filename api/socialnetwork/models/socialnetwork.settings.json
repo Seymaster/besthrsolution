@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "socialnetworks",
+  "info": {
+    "name": "Socialnetwork"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "blogger": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "pinsterest": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "string"
+    },
+    "date_created": {
+      "type": "datetime"
+    },
+    "date_modified": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "socialnetwork"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_statuses",
+  "info": {
+    "name": "job_status"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "employment_type": {
+      "type": "enumeration",
+      "enum": [
+        "Permanent",
+        "Temporary",
+        "Trainee",
+        "Internship"
+      ],
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Inactive",
+        "Suspended"
+      ],
+      "required": true
+    },
+    "Position_time": {
+      "type": "enumeration",
+      "enum": [
+        "Full_Time",
+        "Part_Time"
+      ]
+    },
+    "Internal_job_hist": {
+      "type": "string",
+      "required": true
+    },
+    "FTE_counter": {
+      "type": "integer"
+    },
+    "employeeID": {
+      "type": "string",
+      "required": true
+    },
+    "upload_cv": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "date_created": {
+      "type": "datetime"
+    },
+    "date_modified": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "job_status"
+    }
+  }
+}

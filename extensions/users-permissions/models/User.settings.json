@@ -52,6 +52,42 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "emergency": {
+      "via": "user",
+      "model": "emergency"
+    },
+    "identification": {
+      "via": "user",
+      "model": "identification"
+    },
+    "job_info": {
+      "via": "user",
+      "model": "job-info"
+    },
+    "job_status": {
+      "via": "user",
+      "model": "job-status"
+    },
+    "owned_by": {
+      "via": "user",
+      "model": "language"
+    },
+    "password_for": {
+      "via": "user",
+      "model": "password"
+    },
+    "qualification": {
+      "via": "user",
+      "model": "qualification"
+    },
+    "socialnetwork": {
+      "via": "user",
+      "model": "socialnetwork"
+    },
+    "workexp": {
+      "via": "user",
+      "model": "workexp"
     }
   }
 }

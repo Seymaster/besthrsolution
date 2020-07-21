@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identifications",
+  "info": {
+    "name": "Identification"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Identification_type": {
+      "type": "enumeration",
+      "enum": [
+        "InternationalPassport",
+        "NationalID",
+        "DriversLicence",
+        "VotersCard"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "document_ID": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "issue_date": {
+      "type": "date"
+    },
+    "expiry_date": {
+      "type": "datetime"
+    },
+    "authorized_body": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "identication_file": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "issued_country": {
+      "type": "string",
+      "required": true
+    },
+    "date_created": {
+      "type": "datetime"
+    },
+    "date_modified": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "identification"
+    }
+  }
+}

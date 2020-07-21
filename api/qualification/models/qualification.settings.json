@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "qualifications",
+  "info": {
+    "name": "Qualification"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "school": {
+      "type": "string",
+      "required": true
+    },
+    "education_level": {
+      "type": "string",
+      "required": true
+    },
+    "time_from": {
+      "type": "date"
+    },
+    "date_to": {
+      "type": "date"
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "course": {
+      "type": "string"
+    },
+    "date_created": {
+      "type": "datetime"
+    },
+    "date_modified": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "qualification"
+    }
+  }
+}

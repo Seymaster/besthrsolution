@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workexps",
+  "info": {
+    "name": "Workexp"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "company_name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "time_from": {
+      "type": "date"
+    },
+    "date_to": {
+      "type": "date"
+    },
+    "most_recent": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "job_description": {
+      "type": "text",
+      "required": true
+    },
+    "date_created": {
+      "type": "datetime"
+    },
+    "date_modified": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "workexp"
+    }
+  }
+}

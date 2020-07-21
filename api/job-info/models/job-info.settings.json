@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_infos",
+  "info": {
+    "name": "Job_Info"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "division": {
+      "type": "string",
+      "required": true
+    },
+    "Department": {
+      "type": "string",
+      "required": true
+    },
+    "job_title": {
+      "type": "string",
+      "required": true
+    },
+    "job_level": {
+      "type": "string",
+      "required": true
+    },
+    "job_grade": {
+      "type": "string",
+      "required": true
+    },
+    "effective_date": {
+      "type": "date"
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "report_to": {
+      "type": "string",
+      "required": true
+    },
+    "expatriation_status": {
+      "type": "enumeration",
+      "enum": [
+        "Expatriate",
+        "Non_Expatriate"
+      ],
+      "required": true
+    },
+    "date_created": {
+      "type": "datetime"
+    },
+    "date_modified": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "job_info"
+    }
+  }
+}

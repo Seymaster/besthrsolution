@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "languages",
+  "info": {
+    "name": "Language"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "language": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "proficiency": {
+      "type": "enumeration",
+      "enum": [
+        "Native",
+        "Fluent",
+        "Intermediate"
+      ]
+    },
+    "date_created": {
+      "type": "datetime"
+    },
+    "date_modified": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "owned_by"
+    }
+  }
+}

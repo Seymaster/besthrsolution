@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "collectionName": "emergencies",
   "info": {
     "name": "emergency",
@@ -9,5 +10,73 @@
     "timestamps": true,
     "comment": ""
   },
-  "attributes": {}
+  "attributes": {
+    "relationship": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "primary_contact": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ],
+      "required": true,
+      "unique": true
+    },
+    "home_phone": {
+      "type": "integer"
+    },
+    "work_phone": {
+      "type": "integer"
+    },
+    "address1": {
+      "type": "string",
+      "required": true
+    },
+    "address2": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "zip_code": {
+      "type": "integer",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "date_created": {
+      "type": "datetime"
+    },
+    "date_modified": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "emergency"
+    }
+  }
 }
