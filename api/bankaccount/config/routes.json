@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bankaccounts",
+      "handler": "bankaccount.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bankaccounts/count",
+      "handler": "bankaccount.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bankaccounts/:id",
+      "handler": "bankaccount.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bankaccounts",
+      "handler": "bankaccount.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bankaccounts/:id",
+      "handler": "bankaccount.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bankaccounts/:id",
+      "handler": "bankaccount.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

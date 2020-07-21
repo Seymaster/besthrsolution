@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bankaccounts",
+  "info": {
+    "name": "Bankaccount"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "account_title": {
+      "type": "string",
+      "required": true
+    },
+    "bank_name": {
+      "type": "string",
+      "required": true
+    },
+    "account_number": {
+      "required": true,
+      "unique": true,
+      "type": "integer"
+    },
+    "bank_code": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "bank_branch": {
+      "type": "string",
+      "required": true
+    },
+    "date_created": {
+      "type": "datetime"
+    },
+    "date_modified": {
+      "type": "datetime",
+      "required": false
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "emergencies",
+  "info": {
+    "name": "emergency",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {}
+}

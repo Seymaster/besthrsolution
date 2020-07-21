@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/emergencies",
+      "handler": "emergency.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/emergencies/count",
+      "handler": "emergency.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/emergencies/:id",
+      "handler": "emergency.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/emergencies",
+      "handler": "emergency.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/emergencies/:id",
+      "handler": "emergency.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/emergencies/:id",
+      "handler": "emergency.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
